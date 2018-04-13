@@ -34,7 +34,8 @@ namespace Thread10
             sw.Start();
 
             res = arr.AsParallel().Count(m => m.Value % 2 == 0 && m.Owner.Contains("JO") && m.Zip.CompareTo("5000") < 0);
-            
+
+
             sw.Stop();
             Console.WriteLine($"Count: {res} in {sw.ElapsedMilliseconds} mills");
         }
